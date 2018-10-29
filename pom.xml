@@ -3,6 +3,7 @@
   <groupId>com.flyonsky</groupId>
   <artifactId>microservice</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
   
   <parent>
 	<groupId>org.springframework.boot</groupId>
@@ -20,4 +21,24 @@
   		</dependency>
   	</dependencies>
   </dependencyManagement>
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<executions>
+				<execution>
+					<goals>
+						<goal>repackage</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+	</plugins>
+  </build>
+  <modules>
+  	<module>EurekaServer</module>
+  	<module>timeserver</module>
+  	<module>timeclient</module>
+  </modules>
 </project>
