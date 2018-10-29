@@ -40,5 +40,6 @@
   	<module>EurekaServer</module>
   	<module>timeserver</module>
   	<module>timeclient</module>
+  	<module>zuulgateway</module>
   </modules>
 </project>
