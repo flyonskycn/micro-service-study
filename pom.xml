@@ -41,5 +41,6 @@
   	<module>timeserver</module>
   	<module>timeclient</module>
   	<module>zuulgateway</module>
+  	<module>zipkinserver</module>
   </modules>
 </project>
