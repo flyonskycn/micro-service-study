@@ -37,7 +37,7 @@
 	</plugins>
   </build>
   <modules>
-  	<module>EurekaServer</module>
+  	<module>eurekaserver</module>
   	<module>timeserver</module>
   	<module>timeclient</module>
   	<module>zuulgateway</module>
