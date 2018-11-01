@@ -1,3 +1,15 @@
 spring:
   application:
     name: turbineserver
+
+server:
+  port: 8089
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+turbine:
+  appConfig: timeclient
+  clusterNameExpression: "'default'"
