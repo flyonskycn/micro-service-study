@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: hystrixdashboard
+
+server:
+  port: 2001
+

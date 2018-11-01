@@ -42,5 +42,7 @@
   	<module>timeclient</module>
   	<module>zuulgateway</module>
   	<module>zipkinserver</module>
+  	<module>turbineserver</module>
   </modules>
-</project>
+
+ </project>
