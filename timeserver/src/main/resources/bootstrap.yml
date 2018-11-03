@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: timeserver
+  cloud:
+    config:
+      discovery:        enabled: true
+        serviceId: configserver
+      label: master

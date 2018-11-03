@@ -43,6 +43,7 @@
   	<module>zuulgateway</module>
   	<module>zipkinserver</module>
   	<module>turbineserver</module>
+  	<module>configserver</module>
   </modules>
 
  </project>
