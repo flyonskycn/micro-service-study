@@ -44,6 +44,7 @@
   	<module>zipkinserver</module>
   	<module>turbineserver</module>
   	<module>configserver</module>
+  	<module>oauth2</module>
   </modules>
 
  </project>
