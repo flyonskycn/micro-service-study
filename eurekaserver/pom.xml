@@ -5,7 +5,7 @@
     <artifactId>microservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>EurekaServer</artifactId>
+  <artifactId>eurekaserver</artifactId>
   <dependencies>
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
