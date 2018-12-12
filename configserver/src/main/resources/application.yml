@@ -1,7 +1,9 @@
 spring:
   application:
-    name: configserver  cloud:    config:      server:        git:          uri: git@github.com:flyonskycn/config.git
+    name: configserver  cloud:    config:      server:        git:          uri: https://github.com/flyonskycn/config.git
           search-paths:          - configserver
+          username: flyonskycn
+          password: 462017ufo
 
 server:
   port: 7001

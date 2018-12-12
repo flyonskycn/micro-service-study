@@ -6,3 +6,4 @@ spring:
       discovery:        enabled: true
         serviceId: configserver
       label: master
+      profile: dev
