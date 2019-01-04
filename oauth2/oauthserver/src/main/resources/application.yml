@@ -3,3 +3,8 @@ spring:
     name: oauth2server
 server:
   port: 8080
+
+security: 
+  user: 
+    name: luowg
+    password: flyonsky
