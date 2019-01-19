@@ -15,8 +15,8 @@ public class TimeController {
 	
 	@GetMapping("currentime")
 	public String currentime() throws InterruptedException {
-		int sleep = new Random().nextInt(3000);
-		Thread.sleep(sleep);
+//		int sleep = new Random().nextInt(3000);
+//		Thread.sleep(sleep);
 		return this.getTimeService().currentTime();
 	}
 
