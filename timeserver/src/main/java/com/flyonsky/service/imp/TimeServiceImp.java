@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.flyonsky.boot.autoconfigure.cat.CatAnnotation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ public class TimeServiceImp implements TimeService{
 	private int port;
 
 	@Override
+	@CatAnnotation
 	public String currentTime() {
 		SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 		Date now = Calendar.getInstance().getTime();

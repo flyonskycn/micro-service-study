@@ -7,10 +7,6 @@
   </parent>
   <artifactId>timeclient</artifactId>
   
-  <properties>
-  	<flyonsky.boot.version>2.0.7.RELEASE</flyonsky.boot.version>
-  </properties>
-  
   <dependencies>
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
@@ -39,7 +35,6 @@
     <dependency>
 	    <groupId>org.flyonsky.boot</groupId>
 	    <artifactId>cat-spring-boot-starter</artifactId>
-	    <version>${flyonsky.boot.version}</version>
 	</dependency>
   </dependencies>
 </project>
