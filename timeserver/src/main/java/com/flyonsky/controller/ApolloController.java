@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.netflix.config.ConfigurationManager;
 import com.netflix.config.DynamicIntProperty;
 import com.netflix.config.DynamicPropertyFactory;
 
@@ -23,5 +24,10 @@ public class ApolloController {
 	@GetMapping("size")
 	public int size() {
 		return poolSize.get();
+	}
+	
+	@GetMapping("flag")
+	public boolean flag() {
+		return ConfigurationManager.isConfigurationInstalled();
 	}
 }
