@@ -29,6 +29,11 @@
 		    <artifactId>cat-spring-boot-starter</artifactId>
 		    <version>${flyonsky.boot.version}</version>
 		</dependency>
+ 		<dependency>
+		    <groupId>org.flyonsky.boot</groupId>
+		    <artifactId>apollo-spring-boot-starter</artifactId>
+		    <version>${flyonsky.boot.version}</version>
+		</dependency>
   	</dependencies>
   </dependencyManagement>
   <build>
