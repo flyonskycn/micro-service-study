@@ -1,7 +1,5 @@
 package com.flyonsky.controller;
 
-import java.util.Random;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +13,6 @@ public class TimeController {
 	
 	@GetMapping("currentime")
 	public String currentime() throws InterruptedException {
-//		int sleep = new Random().nextInt(3000);
-//		Thread.sleep(sleep);
 		return this.getTimeService().currentTime();
 	}
 

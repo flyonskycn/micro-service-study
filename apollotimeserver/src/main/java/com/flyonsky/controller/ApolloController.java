@@ -16,8 +16,7 @@ public class ApolloController {
             .getIntProperty("timeserver.thread.pool.size",2,new Runnable() {
 				@Override
 				public void run() {
-                    System.out
-                    	.println("SampleBean.sensitiveData changed to:" + poolSize.get());
+                    System.out.println("timeserver.thread.pool.size changed to:" + poolSize.get());
 				}
 			});
 	
