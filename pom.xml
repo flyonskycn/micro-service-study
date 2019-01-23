@@ -60,6 +60,7 @@
   	<module>turbineserver</module>
   	<module>configserver</module>
   	<module>oauth2</module>
+  	<module>apollotimeserver</module>
   </modules>
 
  </project>

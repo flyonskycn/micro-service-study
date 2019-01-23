@@ -1,18 +1,10 @@
-#apollo
-app: 
-  id: SampleApp
-apollo: 
-  meta: http://localhost:8080
-  bootstrap: 
-    enabled: true
-    namespaces: application
 
 spring:
   application:
     name: timeserver
-#  cloud:
-#    config:
-#      discovery:#        enabled: true
-#        serviceId: configserver
-#      label: master
-#      profile: dev
+  cloud:
+    config:
+      discovery:        enabled: true
+        serviceId: configserver
+      label: master
+      profile: dev

@@ -5,7 +5,7 @@
     <artifactId>microservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>timeserver</artifactId>
+  <artifactId>apollotimeserver</artifactId>
   
   <dependencies>
   	<dependency>
@@ -16,21 +16,17 @@
 	    <groupId>org.springframework.cloud</groupId>
 	    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 	</dependency>
-  	<dependency>
+	<dependency>
 	    <groupId>org.springframework.cloud</groupId>
 	    <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-	</dependency>
-	<dependency>
-	    <groupId>org.springframework.cloud</groupId>
-	    <artifactId>spring-cloud-starter-zipkin</artifactId>
-	</dependency>
-	<dependency>
-	    <groupId>org.springframework.cloud</groupId>
-	    <artifactId>spring-cloud-starter-config</artifactId>
 	</dependency>
     <dependency>
 	    <groupId>org.flyonsky.boot</groupId>
 	    <artifactId>cat-spring-boot-starter</artifactId>
+	</dependency>
+	<dependency>
+	    <groupId>org.flyonsky.boot</groupId>
+	    <artifactId>apollo-spring-boot-starter</artifactId>
 	</dependency>
   </dependencies>
 </project>
