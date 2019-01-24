@@ -12,7 +12,7 @@ public class TimeClientServiceImp implements TimeClientService{
 	
 	private RestTemplate restTemplate;
 
-//	@HystrixCommand(fallbackMethod="error")
+	@HystrixCommand(fallbackMethod="error")
 	@Override
 	public String currentTime() {
 		String data = this.getRestTemplate().getForObject("http://timeserver/currentime", String.class);
