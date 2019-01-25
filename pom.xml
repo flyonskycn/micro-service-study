@@ -12,7 +12,9 @@
   </parent>
   
   <properties>
+  	<mybatis-spring-boot-starter.version>1.3.2</mybatis-spring-boot-starter.version>
   	<flyonsky.boot.version>2.0.7.RELEASE</flyonsky.boot.version>
+  	<druid.version>1.1.10</druid.version>
   </properties>
   
   <dependencyManagement>
@@ -33,6 +35,16 @@
 		    <groupId>org.flyonsky.boot</groupId>
 		    <artifactId>apollo-spring-boot-starter</artifactId>
 		    <version>${flyonsky.boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis-spring-boot-starter.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>${druid.version}</version>
 		</dependency>
   	</dependencies>
   </dependencyManagement>
@@ -61,6 +73,7 @@
   	<module>configserver</module>
   	<module>oauth2</module>
   	<module>apollotimeserver</module>
+  	<module>jobservice</module>
   </modules>
 
  </project>
