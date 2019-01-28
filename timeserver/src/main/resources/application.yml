@@ -21,3 +21,7 @@ endpoints:
   sensitive: false
   beans: 
     sensitive: false
+
+swagger: 
+  groupName: ${spring.application.name}
+  basePackage: com.flyonsky

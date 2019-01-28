@@ -19,3 +19,7 @@ management:
     web:
       exposure:
         include: hystrix.stream
+
+swagger: 
+  groupName: ${spring.application.name}
+  basePackage: com.flyonsky
