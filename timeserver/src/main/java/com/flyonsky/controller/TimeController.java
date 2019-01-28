@@ -17,7 +17,7 @@ public class TimeController {
 	
 	@GetMapping("currentime")
 	@ApiOperation("时间函数")
-	public String currentime() throws InterruptedException {
+	public String currentime(){
 		return this.getTimeService().currentTime();
 	}
 
