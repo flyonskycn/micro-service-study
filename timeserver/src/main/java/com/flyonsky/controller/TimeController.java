@@ -9,7 +9,7 @@ import com.flyonsky.service.TimeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-@Api(tags="时间管理")
+@Api(tags= {"时间管理"})
 @RestController
 public class TimeController {
 

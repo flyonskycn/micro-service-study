@@ -8,14 +8,6 @@
   <artifactId>timeserver</artifactId>
   
   <dependencies>
-    <dependency>
-	    <groupId>org.flyonsky.boot</groupId>
-	    <artifactId>cat-spring-boot-starter</artifactId>
-	</dependency>
-    <dependency>
-	    <groupId>org.flyonsky.boot</groupId>
-	    <artifactId>swagger-spring-boot-starter</artifactId>
-	</dependency>
   	<dependency>
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-starter-web</artifactId>
@@ -36,21 +28,17 @@
 	    <groupId>org.springframework.cloud</groupId>
 	    <artifactId>spring-cloud-starter-zipkin</artifactId>
 	</dependency>
-	<dependency>
+<!-- 	<dependency>
 	    <groupId>org.springframework.cloud</groupId>
 	    <artifactId>spring-cloud-starter-config</artifactId>
+	</dependency> -->
+    <dependency>
+	    <groupId>org.flyonsky.boot</groupId>
+	    <artifactId>cat-spring-boot-starter</artifactId>
 	</dependency>
-	<dependency>
-	    <groupId>org.jboss.logging</groupId>
-	    <artifactId>jboss-logging</artifactId>
-	</dependency>
-	<dependency>
-	    <groupId>com.google.guava</groupId>
-	    <artifactId>guava</artifactId>
-	</dependency>
-	<dependency>
-	    <groupId>javax.validation</groupId>
-	    <artifactId>validation-api</artifactId>
+    <dependency>
+	    <groupId>org.flyonsky.boot</groupId>
+	    <artifactId>swagger-spring-boot-starter</artifactId>
 	</dependency>
   </dependencies>
 </project>
