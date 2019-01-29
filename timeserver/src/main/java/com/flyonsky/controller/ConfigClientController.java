@@ -17,7 +17,7 @@ public class ConfigClientController {
 	private String version;
 	
 	@ApiOperation("版本")
-	@GetMapping
+	@GetMapping("version")
 	public String version() {
 		return version;
 	}
