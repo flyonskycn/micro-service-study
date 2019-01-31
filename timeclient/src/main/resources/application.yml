@@ -23,3 +23,7 @@ management:
 swagger: 
   groupName: ${spring.application.name}
   basePackage: com.flyonsky
+
+feign: 
+  hystrix: 
+    enabled: true

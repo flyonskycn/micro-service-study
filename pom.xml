@@ -60,21 +60,6 @@
 		</dependency>
   	</dependencies>
   </dependencyManagement>
-  <build>
-	<plugins>
-		<plugin>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-maven-plugin</artifactId>
-			<executions>
-				<execution>
-					<goals>
-						<goal>repackage</goal>
-					</goals>
-				</execution>
-			</executions>
-		</plugin>
-	</plugins>
-  </build>
   <modules>
   	<module>eurekaserver</module>
   	<module>timeserver</module>
@@ -87,6 +72,7 @@
   	<module>apollotimeserver</module>
   	<module>jobservice</module>
   	<module>simpledemo</module>
+  	<module>timeserver-api</module>
   </modules>
 
  </project>
