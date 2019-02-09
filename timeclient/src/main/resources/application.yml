@@ -27,3 +27,8 @@ swagger:
 feign: 
   hystrix: 
     enabled: true
+    
+logging:
+  level:
+    root: info
+    
