@@ -68,10 +68,10 @@
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
 	</dependency>
-  	<dependency>
+<!--   	<dependency>
 	    <groupId>org.flyonsky.boot</groupId>
 	    <artifactId>cat-spring-boot-starter</artifactId>
-	</dependency>
+	</dependency> -->
 	<dependency>
 		<groupId>com.alibaba</groupId>
 		<artifactId>druid-spring-boot-starter</artifactId>

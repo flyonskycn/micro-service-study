@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: jobdemo
+
+xxl:
+  job:
+    admin:
+      addresses: http://localhost:8700/jobservice
+    executor: 
+      appname: ${spring.application.name}
+      logpath: 
+    enabled: true
