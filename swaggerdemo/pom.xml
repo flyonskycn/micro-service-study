@@ -5,7 +5,7 @@
     <artifactId>microservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>simpldemo</artifactId>
+  <artifactId>swaggerdemo</artifactId>
   
   <dependencies>
   	<dependency>

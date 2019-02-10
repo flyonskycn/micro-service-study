@@ -1,0 +1,7 @@
+spring:   
+  application: 
+    name: swaggerdemo
+
+swagger: 
+  base-package: com.flyonsky
+  groupName: ${spring.application.name}

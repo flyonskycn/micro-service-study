@@ -71,7 +71,7 @@
   	<module>oauth2</module>
   	<module>apollotimeserver</module>
   	<module>jobservice</module>
-  	<module>simpledemo</module>
+  	<module>swaggerdemo</module>
   	<module>timeserver-api</module>
   </modules>
 
