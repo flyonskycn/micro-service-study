@@ -3,7 +3,7 @@ package com.flyonsky.dao;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.flyonsky.model.XxlJobLogGlue;
+import com.flyonsky.core.model.XxlJobLogGlue;
 
 import java.util.List;
 

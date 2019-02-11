@@ -3,7 +3,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.flyonsky.dao.XxlJobLogDao">
 	
-	<resultMap id="XxlJobLog" type="com.flyonsky.model.XxlJobLog" >
+	<resultMap id="XxlJobLog" type="com.flyonsky.core.model.XxlJobLog" >
 		<result column="id" property="id" />
 
 		<result column="job_group" property="jobGroup" />
@@ -22,8 +22,7 @@
 	    <result column="handle_time" property="handleTime" />
 	    <result column="handle_code" property="handleCode" />
 	    <result column="handle_msg" property="handleMsg" />
-
-		<result column="alarm_status" property="alarmStatus" />
+	    
 	</resultMap>
 
 	<sql id="Base_Column_List">
@@ -40,8 +39,7 @@
 		t.trigger_msg,
 		t.handle_time,
 		t.handle_code,
-		t.handle_msg,
-		t.alarm_status
+		t.handle_msg
 	</sql>
 	
 	<select id="pageList" resultMap="XxlJobLog">
@@ -117,7 +115,7 @@
 	</select>
 
 	
-	<insert id="save" parameterType="com.flyonsky.model.XxlJobLog" useGeneratedKeys="true" keyProperty="id" >
+	<insert id="save" parameterType="com.flyonsky.core.model.XxlJobLog" useGeneratedKeys="true" keyProperty="id" >
 		INSERT INTO XXL_JOB_QRTZ_TRIGGER_LOG (
 			`job_group`,
 			`job_id`,
@@ -178,7 +176,7 @@
 		SELECT
 			DATE_FORMAT(trigger_time,'%Y-%m-%d') triggerDay,
 			COUNT(handle_code) triggerDayCount,
-			SUM(CASE WHEN (trigger_code in (0, 200) and handle_code = 0) then 1 else 0 end) as triggerDayCountRunning,
+			SUM(CASE WHEN (trigger_code = 200 and handle_code = 0) then 1 else 0 end) as triggerDayCountRunning,
 			SUM(CASE WHEN handle_code = 200 then 1 else 0 end) as triggerDayCountSuc
 		FROM XXL_JOB_QRTZ_TRIGGER_LOG
 		WHERE trigger_time BETWEEN #{from} and #{to}
@@ -216,23 +214,5 @@
 			</if>
 		</trim>
 	</delete>
-
-	<select id="findFailJobLogIds" resultType="int" >
-		SELECT id FROM `XXL_JOB_QRTZ_TRIGGER_LOG`
-		WHERE !(
-			(trigger_code in (0, 200) and handle_code = 0)
-			OR
-			(handle_code = 200)
-		)
-		AND `alarm_status` = 0
-		ORDER BY id ASC
-	</select>
-
-	<update id="updateAlarmStatus" >
-		UPDATE XXL_JOB_QRTZ_TRIGGER_LOG
-		SET
-			`alarm_status` = #{newAlarmStatus}
-		WHERE `id`= #{logId} AND `alarm_status` = #{oldAlarmStatus}
-	</update>
 	
 </mapper>

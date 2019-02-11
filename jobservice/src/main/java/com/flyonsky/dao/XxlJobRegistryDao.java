@@ -3,7 +3,7 @@ package com.flyonsky.dao;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.flyonsky.model.XxlJobRegistry;
+import com.flyonsky.core.model.XxlJobRegistry;
 
 import java.util.List;
 

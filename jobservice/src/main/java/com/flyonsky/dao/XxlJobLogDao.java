@@ -3,7 +3,7 @@ package com.flyonsky.dao;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.flyonsky.model.XxlJobLog;
+import com.flyonsky.core.model.XxlJobLog;
 
 import java.util.Date;
 import java.util.List;
@@ -50,11 +50,5 @@ public interface XxlJobLogDao {
 						@Param("jobId") int jobId,
 						@Param("clearBeforeTime") Date clearBeforeTime,
 						@Param("clearBeforeNum") int clearBeforeNum);
-
-	public List<Integer> findFailJobLogIds(@Param("pagesize") int pagesize);
-
-	public int updateAlarmStatus(@Param("logId") int logId,
-								 @Param("oldAlarmStatus") int oldAlarmStatus,
-								 @Param("newAlarmStatus") int newAlarmStatus);
 
 }

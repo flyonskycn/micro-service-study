@@ -1,13 +1,14 @@
 package com.flyonsky.controller;
 
-import com.flyonsky.config.XxlJobAdminConfig;
+import com.flyonsky.core.conf.XxlJobAdminConfig;
+import com.flyonsky.core.model.XxlJobGroup;
+import com.flyonsky.core.model.XxlJobRegistry;
+import com.flyonsky.core.util.I18nUtil;
 import com.flyonsky.dao.XxlJobGroupDao;
 import com.flyonsky.dao.XxlJobInfoDao;
-import com.flyonsky.model.XxlJobGroup;
-import com.flyonsky.model.XxlJobRegistry;
-import com.flyonsky.util.I18nUtil;
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.enums.RegistryConfig;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -90,7 +91,7 @@ public class JobGroupController {
 			// 0=自动注册
 			List<String> registryList = findRegistryByAppName(xxlJobGroup.getAppName());
 			String addressListStr = null;
-			if (registryList!=null && !registryList.isEmpty()) {
+			if (CollectionUtils.isNotEmpty(registryList)) {
 				Collections.sort(registryList);
 				addressListStr = StringUtils.join(registryList, ",");
 			}

@@ -1,7 +1,7 @@
 package com.flyonsky.controller;
 
-import com.flyonsky.annotation.PermessionLimit;
-import com.flyonsky.service.schedule.XxlJobDynamicScheduler;
+import com.flyonsky.controller.annotation.PermessionLimit;
+import com.flyonsky.core.schedule.XxlJobDynamicScheduler;
 import com.xxl.job.core.biz.AdminBiz;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Controller;

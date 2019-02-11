@@ -3,7 +3,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.flyonsky.dao.XxlJobInfoDao">
 
-	<resultMap id="XxlJobInfo" type="com.flyonsky.model.XxlJobInfo" >
+	<resultMap id="XxlJobInfo" type="com.flyonsky.core.model.XxlJobInfo" >
 		<result column="id" property="id" />
 
 		<result column="job_group" property="jobGroup" />
@@ -87,7 +87,7 @@
 		</trim>
 	</select>
 
-	<insert id="save" parameterType="com.flyonsky.model.XxlJobInfo" useGeneratedKeys="true" keyProperty="id" >
+	<insert id="save" parameterType="com.flyonsky.core.model.XxlJobInfo" useGeneratedKeys="true" keyProperty="id" >
 		INSERT INTO XXL_JOB_QRTZ_TRIGGER_INFO (
 			job_group,
 			job_cron,
@@ -139,7 +139,7 @@
 		WHERE t.id = #{id}
 	</select>
 
-	<update id="update" parameterType="com.flyonsky.model.XxlJobInfo" >
+	<update id="update" parameterType="com.flyonsky.core.model.XxlJobInfo" >
 		UPDATE XXL_JOB_QRTZ_TRIGGER_INFO
 		SET
 			job_cron = #{jobCron},

@@ -1,7 +1,7 @@
 package com.flyonsky.service;
 
 
-import com.flyonsky.model.XxlJobInfo;
+import com.flyonsky.core.model.XxlJobInfo;
 import com.xxl.job.core.biz.model.ReturnT;
 
 import java.util.Date;

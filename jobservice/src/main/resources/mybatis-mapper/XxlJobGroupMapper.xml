@@ -3,7 +3,7 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.flyonsky.dao.XxlJobGroupDao">
 	
-	<resultMap id="XxlJobGroup" type="com.flyonsky.model.XxlJobGroup" >
+	<resultMap id="XxlJobGroup" type="com.flyonsky.core.model.XxlJobGroup" >
 		<result column="id" property="id" />
 	    <result column="app_name" property="appName" />
 	    <result column="title" property="title" />
@@ -34,12 +34,12 @@
 		ORDER BY t.order ASC
 	</select>
 
-	<insert id="save" parameterType="com.flyonsky.model.XxlJobGroup" useGeneratedKeys="true" keyProperty="id" >
+	<insert id="save" parameterType="com.flyonsky.core.model.XxlJobGroup" useGeneratedKeys="true" keyProperty="id" >
 		INSERT INTO XXL_JOB_QRTZ_TRIGGER_GROUP ( `app_name`, `title`, `order`, `address_type`, `address_list`)
 		values ( #{appName}, #{title}, #{order}, #{addressType}, #{addressList});
 	</insert>
 
-	<update id="update" parameterType="com.flyonsky.model.XxlJobGroup" >
+	<update id="update" parameterType="com.flyonsky.core.model.XxlJobGroup" >
 		UPDATE XXL_JOB_QRTZ_TRIGGER_GROUP
 		SET `app_name` = #{appName},
 			`title` = #{title},

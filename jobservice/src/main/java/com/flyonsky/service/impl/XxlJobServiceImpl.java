@@ -1,18 +1,19 @@
 package com.flyonsky.service.impl;
 
+import com.flyonsky.core.model.XxlJobGroup;
+import com.flyonsky.core.model.XxlJobInfo;
+import com.flyonsky.core.route.ExecutorRouteStrategyEnum;
+import com.flyonsky.core.schedule.XxlJobDynamicScheduler;
+import com.flyonsky.core.util.I18nUtil;
 import com.flyonsky.dao.XxlJobGroupDao;
 import com.flyonsky.dao.XxlJobInfoDao;
 import com.flyonsky.dao.XxlJobLogDao;
 import com.flyonsky.dao.XxlJobLogGlueDao;
-import com.flyonsky.model.XxlJobGroup;
-import com.flyonsky.model.XxlJobInfo;
 import com.flyonsky.service.XxlJobService;
-import com.flyonsky.service.route.ExecutorRouteStrategyEnum;
-import com.flyonsky.service.schedule.XxlJobDynamicScheduler;
-import com.flyonsky.util.I18nUtil;
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.enums.ExecutorBlockStrategyEnum;
 import com.xxl.job.core.glue.GlueTypeEnum;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.apache.commons.lang3.time.FastDateFormat;
@@ -286,9 +287,9 @@ public class XxlJobServiceImpl implements XxlJobService {
 		Set<String> executerAddressSet = new HashSet<String>();
 		List<XxlJobGroup> groupList = xxlJobGroupDao.findAll();
 
-		if (groupList!=null && !groupList.isEmpty()) {
+		if (CollectionUtils.isNotEmpty(groupList)) {
 			for (XxlJobGroup group: groupList) {
-				if (group.getRegistryList()!=null && !group.getRegistryList().isEmpty()) {
+				if (CollectionUtils.isNotEmpty(group.getRegistryList())) {
 					executerAddressSet.addAll(group.getRegistryList());
 				}
 			}
@@ -324,7 +325,7 @@ public class XxlJobServiceImpl implements XxlJobService {
 		int triggerCountFailTotal = 0;
 
 		List<Map<String, Object>> triggerCountMapAll = xxlJobLogDao.triggerCountByDay(startDate, endDate);
-		if (triggerCountMapAll!=null && triggerCountMapAll.size()>0) {
+		if (CollectionUtils.isNotEmpty(triggerCountMapAll)) {
 			for (Map<String, Object> item: triggerCountMapAll) {
 				String day = String.valueOf(item.get("triggerDay"));
 				int triggerDayCount = Integer.valueOf(String.valueOf(item.get("triggerDayCount")));

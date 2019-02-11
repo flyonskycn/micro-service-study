@@ -1,10 +1,10 @@
 package com.flyonsky.controller;
 
+import com.flyonsky.core.model.XxlJobInfo;
+import com.flyonsky.core.model.XxlJobLogGlue;
+import com.flyonsky.core.util.I18nUtil;
 import com.flyonsky.dao.XxlJobInfoDao;
 import com.flyonsky.dao.XxlJobLogGlueDao;
-import com.flyonsky.model.XxlJobInfo;
-import com.flyonsky.model.XxlJobLogGlue;
-import com.flyonsky.util.I18nUtil;
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.glue.GlueTypeEnum;
 import org.springframework.stereotype.Controller;
