@@ -230,4 +230,47 @@ public class MockitoTest {
         System.out.println(mock.get("some arg"));
         System.out.println(mock.get("some arg"));
     }
+
+    /**
+     * 监控真实对象
+     */
+    @Test
+    public void test11(){
+        List list = new LinkedList();
+        List spy = spy(list);
+
+        // 你可以为某些函数打桩
+        when(spy.size()).thenReturn(100);
+
+        // 通过spy对象调用真实对象的函数
+        spy.add("one");
+        spy.add("two");
+
+        // 输出第一个元素
+        System.out.println(spy.get(0));
+
+        // 因为size()函数被打桩了,因此这里返回的是100
+        System.out.println(spy.size());
+
+        // 交互验证
+        verify(spy).add("one");
+        verify(spy).add("two");
+    }
+
+    /**
+     * 监控真实对象
+     */
+    @Test
+    public  void test12(){
+        List list = new LinkedList();
+        List spy = spy(list);
+
+        // 不可能 : 因为当调用spy.get(0)时会调用真实对象的get(0)函数,此时会发生IndexOutOfBoundsException异常，因为真实List对象是空的
+//        when(spy.get(0)).thenReturn("foo");
+
+        // 你需要使用doReturn()来打桩
+        doReturn("foo").when(spy).get(0);
+
+        System.out.println(spy.get(0));
+    }
 }
