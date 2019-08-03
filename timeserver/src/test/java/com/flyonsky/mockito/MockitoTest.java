@@ -2,7 +2,6 @@ package com.flyonsky.mockito;
 
 import org.junit.Test;
 import org.mockito.InOrder;
-import org.mockito.Mock;
 
 import java.util.LinkedList;
 import java.util.List;
