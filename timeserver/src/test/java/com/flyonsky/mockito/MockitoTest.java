@@ -106,4 +106,17 @@ public class MockitoTest {
         verify(mockedList, atLeast(2)).add("five times");
         verify(mockedList, atMost(5)).add("three times");
     }
+
+    /**
+     * 为返回值为void的函数通过Stub抛出异常
+     */
+    @Test(expected = RuntimeException.class)
+    public void test5(){
+        // 你可以mock具体的类型,不仅只是接口
+        LinkedList mockedList = mock(LinkedList.class);
+        doThrow(new RuntimeException()).when(mockedList).clear();
+
+        // 调用这句代码会抛出异常
+        mockedList.clear();
+    }
 }
