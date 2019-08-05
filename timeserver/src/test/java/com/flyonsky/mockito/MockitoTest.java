@@ -272,4 +272,14 @@ public class MockitoTest {
 
         System.out.println(spy.get(0));
     }
+
+    /**
+     * never用法
+     */
+    @Test
+    public void test13(){
+        List mock = mock(List.class);
+
+        verify(mock, never()).get(1);
+    }
 }
