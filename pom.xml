@@ -20,6 +20,7 @@
 	  <commons-collections4.version>4.2</commons-collections4.version>
 	  <commons-email.version>1.5</commons-email.version>
 	  <boot-admin.version>2.1.6</boot-admin.version>
+	  <mybatis-plus.version>3.1.2</mybatis-plus.version>
   </properties>
 
   <dependencyManagement>
@@ -80,6 +81,11 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-email</artifactId>
 			<version>${commons-email.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>${mybatis-plus.version}</version>
 		</dependency>
   	</dependencies>
   </dependencyManagement>
