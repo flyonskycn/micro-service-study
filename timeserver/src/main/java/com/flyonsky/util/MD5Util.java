@@ -17,8 +17,9 @@ public class MD5Util {
             MessageDigest digest = MessageDigest.getInstance("md5");
             digest.update(content.getBytes(Charset.forName("UTF-8")));
             StringBuilder buf=new StringBuilder();
-            for(byte b:digest.digest())
+            for(byte b:digest.digest()){
                 buf.append(String.format("%02x", b&0xff) );
+            }
             result = buf.toString();
         }catch (NoSuchAlgorithmException e){
             LOGGER.debug("md5 is error ", e);
