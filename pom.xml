@@ -21,6 +21,7 @@
 	  <commons-email.version>1.5</commons-email.version>
 	  <boot-admin.version>2.1.6</boot-admin.version>
 	  <mybatis-plus.version>3.1.2</mybatis-plus.version>
+	  <jmh.versoin>1.21</jmh.versoin>
   </properties>
 
   <dependencyManagement>
@@ -86,6 +87,16 @@
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 			<version>${mybatis-plus.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjdk.jmh</groupId>
+			<artifactId>jmh-core</artifactId>
+			<version>${jmh.versoin}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openjdk.jmh</groupId>
+			<artifactId>jmh-generator-annprocess</artifactId>
+			<version>${jmh.versoin}</version>
 		</dependency>
   	</dependencies>
   </dependencyManagement>
