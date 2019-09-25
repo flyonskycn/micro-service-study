@@ -8,20 +8,22 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 import java.util.concurrent.TimeUnit;
 
-@BenchmarkMode(Mode.Throughput)
+@BenchmarkMode(Mode.AverageTime)
 @State(Scope.Thread)
-public class JMHSample01HelloWorld {
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
+public class FirstBenchmark {
 
     @Benchmark
-    public void wellHelloThere() throws InterruptedException {
-        TimeUnit.MILLISECONDS.sleep(100);
+    public int sleepAWhile() throws InterruptedException {
+        TimeUnit.MILLISECONDS.sleep(10);
+        return 0;
     }
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(JMHSample01HelloWorld.class.getSimpleName())
+                .include(FirstBenchmark.class.getSimpleName())
                 .forks(1)
-                .warmupIterations(1)
+                .warmupIterations(5)
                 .measurementIterations(5)
                 .build();
 
