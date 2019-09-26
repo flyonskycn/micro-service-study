@@ -7,10 +7,15 @@ import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 @State(Scope.Thread)
-public class JMHSample06FixtureLevel {
+public class JMHSample05StateFixtures {
     double x;
 
-    @TearDown(Level.Iteration)
+    @Setup
+    public void prepare() {
+        x = Math.PI;
+    }
+
+    @TearDown
     public void check() {
         assert x > Math.PI : "Nothing changed?";
     }
@@ -28,10 +33,9 @@ public class JMHSample06FixtureLevel {
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(JMHSample06FixtureLevel.class.getSimpleName())
+                .include(JMHSample05StateFixtures.class.getSimpleName())
                 .forks(1)
                 .jvmArgs("-ea")
-                .shouldFailOnError(false) // switch to "true" to fail the complete run
                 .build();
 
         new Runner(opt).run();
