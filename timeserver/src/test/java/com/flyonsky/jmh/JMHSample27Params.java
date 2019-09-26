@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @Fork(1)
 @State(Scope.Benchmark)
-public class JMHSample_27_Params {
+public class JMHSample27Params {
     @Param({"1", "31", "65", "101", "103"})
     public int arg;
 
@@ -29,7 +29,7 @@ public class JMHSample_27_Params {
 
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
-                .include(JMHSample_27_Params.class.getSimpleName())
+                .include(JMHSample27Params.class.getSimpleName())
 //                .param("arg", "41", "42") // Use this to selectively constrain/override parameters
                 .build();
 
